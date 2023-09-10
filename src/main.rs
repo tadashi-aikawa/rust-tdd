@@ -1,3 +1,6 @@
+mod dollar;
+
+use crate::dollar::Dollar;
 use std::ops::Range;
 
 fn main() {
