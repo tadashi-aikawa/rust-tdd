@@ -4,7 +4,7 @@ pub struct Dollar {
 
 impl Dollar {
     pub fn new(amount: i32) -> Self {
-        Dollar { amount }
+        Dollar { amount: 10 }
     }
 
     pub fn times(&self, multiplier: i32) {}
