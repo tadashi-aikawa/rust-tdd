@@ -1,5 +1,5 @@
 pub struct Dollar {
-    pub amount: i32,
+    amount: i32,
 }
 
 impl Dollar {
