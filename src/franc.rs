@@ -1,20 +1,24 @@
+use std::ops::Deref;
+
 use crate::money::Money;
 
 #[derive(Eq, PartialEq, Debug)]
-pub struct Franc {
-    amount: i32,
-}
+pub struct Franc(Money);
 
 impl Franc {
     pub fn new(amount: i32) -> Self {
-        Franc { amount }
+        Franc(Money { amount })
     }
 
     pub fn times(&mut self, multiplier: i32) -> Self {
-        Franc {
-            amount: self.amount * multiplier,
-        }
+        Franc::new(self.amount * multiplier)
     }
 }
 
-impl Money for Franc {}
+impl Deref for Franc {
+    type Target = Money;
+
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
