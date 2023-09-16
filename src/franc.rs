@@ -1,6 +1,6 @@
 use crate::money::Money;
 
-#[derive(Debug)]
+#[derive(Eq, PartialEq, Debug)]
 pub struct Franc {
     amount: i32,
 }
@@ -14,12 +14,6 @@ impl Franc {
         Franc {
             amount: self.amount * multiplier,
         }
-    }
-}
-
-impl<T: Money> PartialEq<T> for Franc {
-    fn eq(&self, other: &T) -> bool {
-        self.amount == other.get_amount()
     }
 }
 
