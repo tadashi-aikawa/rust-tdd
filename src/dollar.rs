@@ -1,5 +1,10 @@
+#[derive(Debug)]
 pub struct Dollar {
     amount: i32,
+}
+
+pub trait Money {
+    fn get_amount(&self) -> i32;
 }
 
 impl Dollar {
@@ -12,8 +17,16 @@ impl Dollar {
             amount: self.amount * multiplier,
         }
     }
+}
 
-    pub fn equals(&mut self, other: Self) -> bool {
-        self.amount == other.amount
+impl<T: Money> PartialEq<T> for Dollar {
+    fn eq(&self, other: &T) -> bool {
+        self.amount == other.get_amount()
+    }
+}
+
+impl Money for Dollar {
+    fn get_amount(&self) -> i32 {
+        self.amount
     }
 }
