@@ -18,6 +18,9 @@ impl Dollar {
 }
 
 impl Money for Dollar {
+    fn get_type(&self) -> &str {
+        "dollar"
+    }
     fn get_amount(&self) -> i32 {
         self.amount
     }
