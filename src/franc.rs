@@ -10,7 +10,7 @@ impl Franc {
         Franc { amount }
     }
 
-    pub fn times(&mut self, multiplier: i32) -> Self {
+    pub fn times(&self, multiplier: i32) -> Self {
         Franc {
             amount: self.amount * multiplier,
         }

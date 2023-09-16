@@ -10,7 +10,7 @@ impl Dollar {
         Dollar { amount }
     }
 
-    pub fn times(&mut self, multiplier: i32) -> Self {
+    pub fn times(&self, multiplier: i32) -> Self {
         Dollar {
             amount: self.amount * multiplier,
         }
