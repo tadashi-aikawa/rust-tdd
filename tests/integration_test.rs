@@ -12,6 +12,8 @@ fn test_multiplication() {
 fn test_equality() {
     assert!(Dollar::new(5).eq(&Dollar::new(5)));
     assert!(!Dollar::new(5).eq(&Dollar::new(6)));
+    assert!(Franc::new(5).eq(&Franc::new(5)));
+    assert!(!Franc::new(5).eq(&Franc::new(6)));
 }
 
 #[test]
