@@ -1,4 +1,4 @@
-use rust_tdd::dollar::Dollar;
+use rust_tdd::{dollar::Dollar, franc::Franc};
 
 #[test]
 fn test_multiplication() {
