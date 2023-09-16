@@ -12,4 +12,8 @@ impl Dollar {
             amount: self.amount * multiplier,
         }
     }
+
+    pub fn equals(&mut self, other: Self) -> bool {
+        self.amount == other.amount
+    }
 }
