@@ -1,3 +1,5 @@
+use crate::money::Money;
+
 #[derive(Eq, PartialEq, Debug)]
 pub struct Dollar {
     amount: i32,
@@ -14,3 +16,5 @@ impl Dollar {
         }
     }
 }
+
+impl Money for Dollar {}
