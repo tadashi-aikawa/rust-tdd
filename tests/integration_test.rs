@@ -1,4 +1,4 @@
-use rust_tdd::{dollar::Dollar, franc::Franc};
+use rust_tdd::{dollar::Dollar, franc::Franc, money::Money};
 
 #[test]
 fn test_multiplication() {
@@ -14,6 +14,7 @@ fn test_equality() {
     assert!(!Dollar::new(5).eq(&Dollar::new(6)));
     assert!(Franc::new(5).eq(&Franc::new(5)));
     assert!(!Franc::new(5).eq(&Franc::new(6)));
+    assert!(!Franc::new(5).equals(&Dollar::new(5)));
 }
 
 #[test]
