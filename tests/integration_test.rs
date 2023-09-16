@@ -4,11 +4,8 @@ use rust_tdd::dollar::Dollar;
 fn test_multiplication() {
     let mut five = Dollar::new(5);
 
-    let product = five.times(2);
-    assert_eq!(product.amount, 10);
-
-    let product = five.times(3);
-    assert_eq!(product.amount, 15);
+    assert_eq!(five.times(2), Dollar::new(10));
+    assert_eq!(five.times(3), Dollar::new(15));
 }
 
 #[test]
