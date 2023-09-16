@@ -1,10 +1,8 @@
+use crate::money::Money;
+
 #[derive(Debug)]
 pub struct Dollar {
     amount: i32,
-}
-
-pub trait Money {
-    fn get_amount(&self) -> i32;
 }
 
 impl Dollar {
