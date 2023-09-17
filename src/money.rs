@@ -1,5 +1,3 @@
-use crate::dollar::Dollar;
-
 pub trait Money {
     fn new(amount: i32) -> Self;
 
